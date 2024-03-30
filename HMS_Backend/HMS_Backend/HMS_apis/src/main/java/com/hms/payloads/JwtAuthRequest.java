@@ -18,6 +18,7 @@ public class JwtAuthRequest {
 	}
 
 	public String getPassword() {
+		System.out.println(password);
 		return password;
 	}
 

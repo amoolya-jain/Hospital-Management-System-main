@@ -6,7 +6,7 @@ export const singup = (user) => {
 
 export const loginUser = (loginDetails) => {
     // debugger
-    return MYAXIOIS.post('/v1/auth/login', loginDetails).then((response) => response.data)
+    return MYAXIOIS.post('v1/auth/login', loginDetails).then((response) => response.data)
 }
 
 export const getTheUser = (email) => {

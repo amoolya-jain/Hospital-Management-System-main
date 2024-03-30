@@ -69,6 +69,7 @@ public class PatientServiceImpl implements PatientService {
 
 		User user = this.modelMapper.map(userDto, User.class);
 		user.setPassword(this.passwordEncoder.encode(user.getPassword()));
+		//user.setPassword(user.getPassword());
 
 		Role role = this.roleRepo.findById(AppConstants.ROLE_PATIENT)
 				.orElseThrow((() -> new ResourceNotFoundException("Role", "Role id", 0)));
