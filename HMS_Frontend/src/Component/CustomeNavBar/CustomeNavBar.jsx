@@ -40,14 +40,18 @@ function CustomeNavBar(args) {
   }
   return (
     <div>
+   
+        <div className="container-fluid nav_bg">
+            <div classNamerow='row'>
+                <div className="col-10 mx-auto"></div>
       <Navbar
-        color="dark"
-        dark="true"
+        color="light"
+        // dark="true"
         expand="sm"
         fixed="top"
         className="px-4 mb"
       >
-        <NavbarBrand href="/">Hospital Management System</NavbarBrand>
+        <NavbarBrand href="/">HealCare</NavbarBrand>
         <NavbarToggler onClick={toggle} />
 
         <Collapse isOpen={isOpen} navbar>
@@ -85,7 +89,11 @@ function CustomeNavBar(args) {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+      </div>
+            </div>
+           
+        </div>
+   
   );
 }
 

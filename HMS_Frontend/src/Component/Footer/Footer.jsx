@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import Base from "../Base/Base";
 const Footer = () =>{
     return (<>
-        <footer className='bg-light align-center'>
+    <br></br>
+        <footer className='bg-light align-center' style={{textAlign:"center"}}>
             <p>
-                @ 2023 HMS . All Rights Reserved  | Terms and Conditions
+                @ 2024 HealCare . All Rights Reserved  | Terms and Conditions
             </p>
 
         </footer>

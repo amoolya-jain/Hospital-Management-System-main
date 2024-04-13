@@ -83,7 +83,7 @@ function Appointment() {
           <Col sm={{ size:6, offset: 1 }} >
             <Card outline color="dark">
               <CardHeader>
-                <h1>Welcome Patient</h1>
+                
                 <h3>Book Appointment</h3>
               </CardHeader>
               <CardBody>

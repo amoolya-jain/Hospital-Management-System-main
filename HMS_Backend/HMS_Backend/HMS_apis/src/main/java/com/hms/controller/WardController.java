@@ -39,7 +39,11 @@ public class WardController {
 	@GetMapping("/")
 	public ResponseEntity<List<WardDto>> getWard() {
 		List<WardDto> wards = this.wardService.getward();
+		System.out.println("wards eclipse :" +wards);
 		return ResponseEntity.ok(wards);
+		
+		
+		
 	}
 	
 	//--------------------------------------------------------------------------------------------------------------

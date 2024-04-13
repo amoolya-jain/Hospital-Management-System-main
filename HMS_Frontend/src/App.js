@@ -36,6 +36,8 @@ import AdmitPatient from "./Component/Pages/Receptionist/AdmitPatient";
 import DischargePatient from "./Component/Pages/Receptionist/DischargePatient";
 import GetResourcesReceptionist from "./Component/Pages/HospitalResources/GetResourcesReceptionist";
 
+
+
 function App() {
   return (
     <div className="App">
@@ -63,6 +65,9 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/forgot" element={<ForgotPass />}></Route>
             <Route path="/signUp" element={<Signup />}></Route>
+          
+          
+
             
             <Route path="/user" element={<PrivateRoute />}>
               <Route path="patient/dashboard" element={<PatientDashboard />}></Route>

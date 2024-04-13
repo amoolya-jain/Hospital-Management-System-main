@@ -18,6 +18,7 @@ function HealthHistory(args) {
   const [data, setData] = useState({
     content: [],
   });
+  //const [med, setMedicine] = useState([]);
   const [med, setMedicine] = useState([]);
 
   useEffect(() => {
@@ -48,7 +49,9 @@ function HealthHistory(args) {
 
   const getMedicines = (id) => {
     MYAXIOIS.get(`/healthhistory/` + id + `/medicine`).then((response) => {
+      
       // content: [...data.content, ...serverData]
+      console.log("medicine:"+response.data);
       setMedicine(response.data);
       toggle();
     });
@@ -105,6 +108,7 @@ function HealthHistory(args) {
                           <Button
                             color="primary"
                             onClick={() => {
+                              console.log("id");
                               getMedicines(healthhistory.id);
                             }}
                           >
@@ -131,17 +135,16 @@ function HealthHistory(args) {
               <Table hover responsive size="" striped className="w-100  p-3">
                 <tr>
                   <th>Medicine Name</th>
-                  <th>Medicine Charges</th>
-                  <th>Duration</th>
+                  <th>Medicine time</th>
+                  <th>Quantity</th>
                 </tr>
-                {med &&
-                  med?.map((medicine) => {
+                { data?.content?.map((healthhistory) => {
                     return (
                       //debugger;
-                      <tr key={medicine?.id}>
-                        <td>{medicine.medicineName}</td>
-                        <td>{medicine.medicineCharges}</td>
-                        <td>{medicine.duration}</td>
+                      <tr key={healthhistory?.healthhistory?.id}>
+                        <td>{healthhistory.prescriptionInstruction}</td>
+                        <td>morning-night</td>
+                        <td>1-1</td>
                       </tr>
                     );
                   })}

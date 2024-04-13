@@ -17,6 +17,38 @@ import lombok.Setter;
 @JsonInclude(value = Include.NON_NULL)
 public class WardDto {
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getWardType() {
+		return wardType;
+	}
+
+	public void setWardType(String wardType) {
+		this.wardType = wardType;
+	}
+
+	public Double getWardCharges() {
+		return wardCharges;
+	}
+
+	public void setWardCharges(Double wardCharges) {
+		this.wardCharges = wardCharges;
+	}
+
+	public Set<PatientDto> getPatients() {
+		return patients;
+	}
+
+	public void setPatients(Set<PatientDto> patients) {
+		this.patients = patients;
+	}
+
 	private Integer id;
 
 	private String wardType;

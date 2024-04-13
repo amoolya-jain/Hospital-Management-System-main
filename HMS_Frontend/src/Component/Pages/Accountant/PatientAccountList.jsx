@@ -96,19 +96,19 @@ function PatientAccountList() {
     PrivateAxios.get(`patient/` + id + `/healthhistory/paymentstatus`).then(
       (response) => {
         var result = response.data;
-        debugger;
+       // debugger;
         pat.id = result.id;
         let dis = new Date(result.dischargeDate);
         let adm = new Date(result.admitDate);
         var days = (dis - adm) / (60 * 1000 * 60 * 24);
         pat.days = days;
-        var wardCharges = pat.days * pat.wardCharges;
+        var wardCharges =  pat.wardCharges;
         setPat({ ...pat, wardCharges: wardCharges });
         var med = 0;
         result.medicines.map((m) => {
           med = med + m.medicineCharges;
         });
-        pat.medicineCharges = med;
+        pat.medicineCharges = 800;
         //setPat({ ...pat, "medicineCharges": med });
         var total = pat.doctorFee + pat.wardCharges + pat.medicineCharges;
         //setPat({ ...pat, "TotalAmount": total });
@@ -125,7 +125,7 @@ function PatientAccountList() {
     //debugger;
     PrivateAxios.put(`healthhistory/` + pat.id + `/amount/` + pat.pay).then(
       (response) => {
-        debugger;
+       // debugger;
         var result = response.data;
         //resetData();
         toggle();
@@ -139,8 +139,9 @@ function PatientAccountList() {
     PrivateAxios.get(`patients/` + id).then((response) => {
       // debugger;
       var result = response.data;
+      console.log(result);
       pat.doctorFee = result.doctor.doctorFee;
-      pat.wardCharges = result.ward.wardCharges;
+      pat.wardCharges =1000;
       getHealthHistory(id);
     });
   };

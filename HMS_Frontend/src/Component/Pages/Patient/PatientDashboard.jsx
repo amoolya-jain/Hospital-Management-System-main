@@ -2,8 +2,12 @@ import React from "react";
 import { Col, Row } from "reactstrap";
 import Base from "../../Base/Base";
 import VerticalNavbar from "./VerticalNavbarPatient";
+import Dashboard from "../../../Component/Dashboard";
+
 
 export default function PatientDashboard() {
+ 
+
   return (
     <Base>
       <br />
@@ -14,7 +18,9 @@ export default function PatientDashboard() {
           <VerticalNavbar />
         </Col>
         <Col sm={{ size: 6, offset: 1 }}>
-          <h1>Welcome Patient</h1>
+         
+          <Dashboard
+          />
         </Col>
       </Row>
     </Base>

@@ -7,7 +7,8 @@ import BaseCa from "../Base/BaseCa";
 function Card(props) {
   return (<BaseCa>
       <>
-        <div className="col-md-4 col-10 mx-auto">
+      <br/>
+        <div className="col-md-6 col-10 mx-auto">
           <div className="card">
             <img
               src={props.imgsrc}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import Base from "../../Base/Base";
 import VerticalNavbarDoctor from "./VerticalNavbarDoctor";
+import Dashboard from "../../../Component/Dashboard";
 
 export default function DoctorDashboard() {
   return (
@@ -15,6 +16,9 @@ export default function DoctorDashboard() {
         </Col>
         <Col sm={{ size: 6, offset: 1 }}>
           <h1>Dashboard</h1>
+          <Dashboard
+          
+          />
         </Col>
       </Row>
     </Base>

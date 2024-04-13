@@ -59,6 +59,8 @@ function Login() {
           toast.success("Logged In");
 
           // debugger
+          console.log(data.user.id);
+          
           data.user.roles[0].id == 500
             ? navigate("/user/admin/dashboard")
             : data.user.roles[0].id == 501

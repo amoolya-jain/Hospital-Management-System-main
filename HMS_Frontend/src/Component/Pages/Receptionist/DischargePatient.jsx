@@ -82,7 +82,7 @@ function DischargePatient() {
 
   const confirm = () => {
     ///healthhistory/{Id}/discharge
-    debugger;
+   // debugger;
     PrivateAxios.put(`healthhistory/` + health.id + `/discharge`).then(
       (response) => {
         toggle();

@@ -14,6 +14,7 @@ import Base from "../../Base/Base";
 import AdmitPatient from "./AdmitPatient";
 import DischargePatient from "./DischargePatient";
 import VerticalNavbarReceptionist from "./VerticalNavbarReceptionist";
+import Dashboard from "../../../Component/Dashboard";
 
 export default function ReceptionistDashboard() {
 
@@ -28,6 +29,9 @@ export default function ReceptionistDashboard() {
       </Col>
       <Col sm={{ size: 6, offset: 1 }}>
         <h1>Dashboard</h1>
+        <Dashboard
+         
+          />
       </Col>
     </Row>
   </Base>

@@ -4,15 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <>
+        <div>
+        <br></br>
         <div className="container-fluid nav_bg">
             <div classNamerow='row'>
                 <div className="col-10 mx-auto">
 
              
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/">Hospital Management System</NavLink>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor:"#C4E4FF"}}>
+  <div className="container-fluid" style={{backgroundColor:"#C4E4FF", borderRadius:"10px"}}>
+    <NavLink className="navbar-brand" to="/">HealCare</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -57,8 +58,9 @@ const Navbar = () => {
 </nav>
 </div>
             </div>
+            <br></br>
         </div>
-        </>
+        </div>
     );
 };
 export  default Navbar;

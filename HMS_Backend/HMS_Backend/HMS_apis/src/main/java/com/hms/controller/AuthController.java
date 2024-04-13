@@ -51,15 +51,15 @@ public class AuthController {
 	@PostMapping("/login")
 	public ResponseEntity<JwtAuthResponse> createToken(@RequestBody JwtAuthRequest request) throws Exception {
        
-        System.out.println("HELLO please respond");
+        
 		this.authenticate(request.getUsername(), request.getPassword());
-		System.out.println("stfu!!!");
+	
 		UserDetails userDetails = this.userDetailsService.loadUserByUsername(request.getUsername());
-		System.out.println("WORK!!!!");
+	
 		String token = this.jwtTokenHelper.generateToken(userDetails);
-		System.out.println("ABCDF");
+	
 		JwtAuthResponse response = new JwtAuthResponse();
-		System.out.println("vhgekjcbkjfen");
+	
 		response.setToken(token);
 		response.setUser(this.modelMapper.map((User) userDetails, UserDto.class));
 

@@ -96,7 +96,7 @@ function AppointPatientList() {
   };
 
   const handleFormSubmit = () => {
-    debugger;
+   // debugger;
     updatePatientStatus(health, admitStatus).then((servervalue) => {
       toggle();
       toast.success("Patient Prescription updated");
@@ -201,7 +201,7 @@ function AppointPatientList() {
           <>
             <Form onSubmit={handleFormSubmit}>
               <FormGroup>
-                <Label for="diseases">Enter Diseases</Label>
+                <Label for="diseases">Enter Diagnosis</Label>
                 <Input
                   type="text"
                   id="diseases"

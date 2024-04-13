@@ -38,7 +38,9 @@ function AdmitPatient() {
 
   const [health, setHealth] = useState({});
 
-  const [ward, setWard] = useState([]);
+  const [ward, setWard] = useState([
+   
+  ]);
 
   useEffect(() => {
     console.log(currentPage)
@@ -99,6 +101,7 @@ function AdmitPatient() {
   const getAllWards = () => {
     PrivateAxios.get(`wards/`).then((response) => {
       var result = response.data;
+      console.log("wards: "+result[0]);
       setWard(result);
       //debugger;
     });
@@ -229,11 +232,22 @@ function AdmitPatient() {
                         <option disabled value={0}>
                           --Select Ward--
                         </option>
+                       {/* { console.log("ward select: "+ward[0])}
                         {ward.map((d) => (
                           <option value={d?.id} key={d?.id}>
-                            {d.wardType + " " + "charges = " + d.wardCharges}
+                            {d.ward_type + " " + "charges = " + d.wardCharges}
                           </option>
-                        ))}
+                        ))} */}
+                        <option value="800">
+                        General-ward - charges = "800/-"
+                        </option>
+                        <option value="1500">
+                      ICU - charges = "1500/-"
+                        </option>
+                        <option value="1200">
+                        Special-ward - charges = "1200/-"
+                        </option>
+
                       </Input>
                     </td>
                   </tr>

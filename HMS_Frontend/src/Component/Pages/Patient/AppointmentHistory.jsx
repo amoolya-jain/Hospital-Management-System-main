@@ -49,10 +49,11 @@ function AppintmentHistory(args) {
   };
 
   const cancelAppointment = () => {
-    debugger;
+    //debugger;
     PrivateAxios.delete(`/healthhistory/` + res.id).then((response) => {
       const result = response.data;
       if (result.success === true) {
+        toast.success("Appointment Deleted Successfully");
         toggle();
         resetData();
         toast.success("Appointment Deleted Successfully");
@@ -66,6 +67,7 @@ function AppintmentHistory(args) {
   const toggle = (i) => {
     res.id = i;
     setModal(!modal);
+   
   };
 
   const healthhistory = data?.content;
@@ -137,7 +139,7 @@ function AppintmentHistory(args) {
                 outline
                 color="primary"
                 className="ms-3"
-                onClick={() => cancelAppointment()}
+                onClick={cancelAppointment}
               >
                 Yes
               </Button>
